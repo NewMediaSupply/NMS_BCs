@@ -75,7 +75,7 @@ def load_shape(self, context):
     object_name = bpy.data.window_managers["WinMan"].nmsbcs_preview_thumbs
     object_namestripped = object_name.replace(".png", "")
     bpy.ops.wm.append(filename=object_namestripped, directory=path)
-    bpy.data.scenes['Scene'].bc.shape = bpy.data.objects[object_namestripped]
+    context.scene.bc.shape = bpy.data.objects[object_namestripped]
     # print(path)
     # print(object_name.replace(".png", ""))
 
